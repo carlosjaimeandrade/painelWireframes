@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div class="app">
+    <div data-page="home" class="app">
         <aside>
             <div class="logo">
                 <div class="icon-logo"><i class="fa-brands fa-html5"></i> </div>
@@ -24,15 +24,15 @@
             <div class="nav">
                 <ul>
                     <li>
-                        <div class="icon-aside"> <i class="fa-solid fa-house"></i> </div>
+                        <div data-page-select="home" class="icon-aside"> <i class="fa-solid fa-house"></i> </div>
                         <span>Home</span>
                     </li>
                     <li>
-                        <div class="icon-aside"> <i class="fa-solid fa-square-poll-vertical"></i> </div>
+                        <div data-page-select="graficos" class="icon-aside"> <i class="fa-solid fa-square-poll-vertical"></i> </div>
                         <span>Graficos</span>
                     </li>
                     <li>
-                        <div class="icon-aside"><i class="fa-solid fa-gear"></i> </div>
+                        <div data-page-select="configuração" class="icon-aside"><i class="fa-solid fa-gear"></i> </div>
                         <span>Configuração</span>
                     </li>
                 </ul>
@@ -94,3 +94,15 @@
 </body>
 
 </html>
+
+<script>
+    const page = document.querySelector('[data-page]').getAttribute('data-page');
+    const selects = document.querySelectorAll('[data-page-select]');
+    selects.forEach(select=>{
+        if(select.getAttribute('data-page-select') == page) {
+            select.style.backgroundColor = '#6DAA9C';
+            select.style.color = '#fff';
+            select.parentNode.children[1].style.color = '#fff';
+        }
+    })
+</script>
