@@ -16,12 +16,12 @@ aside {
     flex-direction: column;
     align-content: center;
     position: relative;
+    transition: 1s;
 }
 
 
 main {
     background-color: #F7F7F7;
-    height: 100%;
     width: 100%;
     border-radius: 50px 0px 0px 50px;
     display: flex;
@@ -85,12 +85,11 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
     background-color: #6DAA9C;
     margin: 15px 0px;
     color: #292929;
-    ;
 }
 
 .logo {
@@ -121,6 +120,7 @@ body {
 .user-name {
     color: #fff;
     font-size: 15px;
+    min-width: 130px ;
 }
 
 .user-desc {
@@ -129,16 +129,15 @@ body {
 }
 
 .user>div {
-    margin: 5px
+    margin: 5px;
 }
 
 .result-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
     align-items: center;
-    padding: 20px 0px;
+    padding: 10px 0px;
 }
 
 .result-content {
@@ -317,8 +316,12 @@ tbody tr td {
     padding: 8px;
 }
 
+thead tr td {
+    padding: 8px;
+}
 
-tr:hover {
+
+tbody tr:hover {
     background-color: #F7F7F7;
 }
 
@@ -368,4 +371,59 @@ tr:hover {
 
 .bg-green {
     background-color: #4CAA98;
+}
+.menu-btn{
+    display: none;
+}
+.menu-btn-close{
+    display: none;
+}
+@media (max-width: 1000px) {
+    main{
+        border-radius: 0px;
+    }
+    aside{
+        position: fixed;
+        z-index: 999;
+        overflow: hidden;
+        width: 0;
+    }
+    .back-front-arrow{
+        display: none;
+    }
+    .menu-btn{
+        display: block;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    .menu-btn-close{
+        position: absolute;
+        display: block;
+        right: 18px;
+        top: 10px;
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    .result-content{
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .result-card{
+        flex-wrap: wrap;
+    }
+    .icon-result {
+        font-size: 40px;
+    }
+    .details-view{
+        flex-wrap: wrap;
+    }
+    .result-card-two{
+        flex-wrap: wrap;
+    }
+    .result-content{
+        margin-top: 10px;
+    }
 }

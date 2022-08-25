@@ -18,6 +18,7 @@
 <body>
     <div data-page="home" class="app">
         <aside>
+            <i class="fa-solid fa-xmark menu-btn-close"></i>
             <div class="logo">
                 <div class="icon-logo"><i class="fa-brands fa-html5"></i> </div>
                 <h4>LogoType</h4>
@@ -52,13 +53,17 @@
         <main>
             <div class="result-container">
                 <div class="result-content nav-top">
-                    <div>
+                    <div class="menu-btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <div class="back-front-arrow">
                         <a href=""><i class="fa-solid fa-arrow-left-long"></i></a>
                         <a href=""><i class="fa-solid fa-arrow-right-long"></i></a>
                     </div>
                     <div class="search">
                         <input placeholder="Search" type="text"><i class="fa-solid fa-magnifying-glass"></i>
                     </div>
+                   
                 </div>
                 <div class="result-content">
                     <h5>Category Name</h5>
@@ -219,45 +224,20 @@
 
 </html>
 
-<script>
-    const page = document.querySelector('[data-page]').getAttribute('data-page');
-    const selects = document.querySelectorAll('[data-page-select]');
-    selects.forEach(select => {
-        if (select.getAttribute('data-page-select') == page) {
-            select.style.backgroundColor = '#6DAA9C';
-            select.style.color = '#fff';
-            select.parentNode.children[1].style.color = '#fff';
-        }
-    })
-
-    const progressBars = document.querySelectorAll('[data-percentage]')
-    progressBars.forEach(bar =>{
-        bar.style.width = `${bar.getAttribute('data-percentage')}%`
-        bar.parentNode.parentNode.children[0].innerHTML = `${bar.getAttribute('data-percentage')}%`
-    })
-</script>
-
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-  google.charts.load('current', {'packages':['corechart']});
-  google.charts.setOnLoadCallback(drawChart);
+<script type="text/javascript" src="./graphic.js"></script>
+<script type="text/javascript" src="./pageHover.js"></script>
+<script type="text/javascript" src="./progressBar.js"></script>
 
-  function drawChart() {
-    var data = google.visualization.arrayToDataTable([
-      ['Mês', 'Sales', 'Expenses'],
-      ['Janeiro',  1000,      400],
-      ['Fevereiro',  560,      460],
-      ['Março',  535,      300]
-    ]);
+<script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const menuBtnClose = document.querySelector('.menu-btn-close');
+    const aside = document.querySelector('aside');
+    menuBtn.onclick = () =>{
+        aside.style.width = '300px'
+    }
+    menuBtnClose.onclick = () =>{
+        aside.style.width = '0px'
+    }
 
-    var options = {
-      title: '',
-      hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
-      vAxis: {minValue: 0},
-      colors: ['#4AA088', '#FF6A64']
-    };
-
-    var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
-    chart.draw(data, options);
-  }
 </script>
