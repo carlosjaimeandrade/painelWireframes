@@ -63,14 +63,14 @@
                 <div class="result-content">
                     <h5>Category Name</h5>
                     <div class="result-card">
-                        <div class="result-card-content">
+                        <div class="result-card-main">
                             <div class="result-card-info">
-                                <div class="info-title">
+                                <div class="result-card-info-title">
                                     <h5>51</h5>
                                     <small>lorem</small>
                                 </div>
                                 <div>
-                                    <div class="icon-result green"> <i class="fa-solid fa-house"></i> </div>
+                                    <div class="icon-result green-icon"> <i class="fa-solid fa-house"></i> </div>
                                 </div>
                             </div>
                             <div class="progress-bar">
@@ -80,14 +80,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="result-card-content">
+                        <div class="result-card-main">
                             <div class="result-card-info">
-                                <div class="info-title">
+                                <div class="result-card-info-title">
                                     <h5>51</h5>
                                     <small>lorem</small>
                                 </div>
                                 <div>
-                                    <div class="icon-result green"> <i class="fa-solid fa-house"></i> </div>
+                                    <div class="icon-result green-icon"> <i class="fa-solid fa-house"></i> </div>
                                 </div>
                             </div>
                             <div class="progress-bar">
@@ -97,14 +97,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="result-card-content">
+                        <div class="result-card-main">
                             <div class="result-card-info">
-                                <div class="info-title">
+                                <div class="result-card-info-title">
                                     <h5>51</h5>
                                     <small>lorem</small>
                                 </div>
                                 <div>
-                                    <div class="icon-result green"> <i class="fa-solid fa-house"></i> </div>
+                                    <div class="icon-result green-icon"> <i class="fa-solid fa-house"></i> </div>
                                 </div>
                             </div>
                             <div class="progress-bar">
@@ -114,14 +114,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="result-card-content">
+                        <div class="result-card-main">
                             <div class="result-card-info">
-                                <div class="info-title">
+                                <div class="result-card-info-title">
                                     <h5>51</h5>
                                     <small>lorem</small>
                                 </div>
                                 <div>
-                                    <div class="icon-result green"> <i class="fa-solid fa-house"></i> </div>
+                                    <div class="icon-result green-icon"> <i class="fa-solid fa-house"></i> </div>
                                 </div>
                             </div>
                             <div class="progress-bar">
@@ -133,26 +133,83 @@
                         </div>
                     </div>
                 </div>
-                <div class="result-content graphic">
+                <div class="result-content details-view">
                     <div>
                         <h5>Category Name</h5>
                         <div>
-                            asdasdasd
+                            <div id="chart_div" style="width: 100%; height: 100%;"></div>
                         </div>
                     </div>
                     <div>
                         <h5>Category Name</h5>
-                        <div>
-                            asdasdasd
+                        <div class="table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Coluna 1</td>
+                                        <td>Coluna 2</td>
+                                        <td>Coluna 3</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>valor 1</td>
+                                        <td>valor 2</td>
+                                        <td>valor 3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>valor 1</td>
+                                        <td>valor 2</td>
+                                        <td>valor 3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>valor 1</td>
+                                        <td>valor 2</td>
+                                        <td>valor 3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>valor 1</td>
+                                        <td>valor 2</td>
+                                        <td>valor 3</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
                 <div class="result-content">
                     <h5>Category Name</h5>
                     <div class="result-card-two">
-                        <div>asdasd</div>
-                        <div>asdasd</div>
-                        <div>asdasd</div>
+                        <div class="result-card-two-content bg-black">
+                            <div>
+                                <div class="icon-card-two"><i class="fa-solid fa-camera"></i> </div>
+                            </div>
+                            <div>
+                                <h3 class="object-name">Project</h3>
+                                <small class="object-desc">lorem ipsum</small>
+                            </div>
+                            <a href=""><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                        <div class="result-card-two-content bg-red">
+                            <div>
+                                <div class="icon-card-two"><i class="fa-solid fa-camera"></i> </div>
+                            </div>
+                            <div>
+                                <h3 class="object-name">Project</h3>
+                                <small class="object-desc">lorem ipsum</small>
+                            </div>
+                            <a href=""><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                        <div class="result-card-two-content bg-green">
+                            <div>
+                                <div class="icon-card-two"><i class="fa-solid fa-camera"></i> </div>
+                            </div>
+                            <div>
+                                <h3 class="object-name">Project</h3>
+                                <small class="object-desc">lorem ipsum</small>
+                            </div>
+                            <a href=""><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -178,4 +235,29 @@
         bar.style.width = `${bar.getAttribute('data-percentage')}%`
         bar.parentNode.parentNode.children[0].innerHTML = `${bar.getAttribute('data-percentage')}%`
     })
+</script>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Mês', 'Sales', 'Expenses'],
+      ['Janeiro',  1000,      400],
+      ['Fevereiro',  560,      460],
+      ['Março',  535,      300]
+    ]);
+
+    var options = {
+      title: '',
+      hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+      vAxis: {minValue: 0},
+      colors: ['#4AA088', '#FF6A64']
+    };
+
+    var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  }
 </script>

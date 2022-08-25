@@ -142,13 +142,15 @@ body {
 }
 
 .result-content {
-    width: 80%;
+    width: 100%;
+    padding: 0px 20px;
 }
+
+
 
 .result-card {
     display: flex;
 }
-
 
 .result-card-two {
     display: flex;
@@ -156,7 +158,6 @@ body {
 }
 
 .result-card-two>div {
-    background-color: #ffffff;
     display: flex;
     margin: 10px 20px;
     border: 1px solid #2929291f;
@@ -170,17 +171,23 @@ body {
     margin: 0px 20px;
 }
 
-.graphic {
+.details-view {
     display: flex;
 }
 
-.graphic>div {
+.details-view h5 {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.details-view>div {
     background-color: #ffffff;
     width: 100%;
     margin: 10px 20px;
     border: 1px solid #2929291f;
     border-radius: 15px;
-    height: 200px;
+    height: 250px;
+    overflow: auto;
 }
 
 .nav-top {
@@ -229,7 +236,7 @@ body {
     margin: 15px 0px;
 }
 
-.green {
+.green-icon {
     background-color: #a1d3c617;
     color: rgb(109, 170, 156);
 }
@@ -263,7 +270,7 @@ body {
     border-radius: 50px;
 }
 
-.result-card-content {
+.result-card-main {
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -282,11 +289,83 @@ body {
     align-items: center;
 }
 
-.info-title h5 {
+.result-card-info-title h5 {
     font-size: 18px;
 }
 
-.info-title small {
+.result-card-info-title small {
     font-size: 12px;
     color: #292929c2
+}
+
+.table {
+    padding: 20px;
+}
+
+.table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+
+.table tr {
+    border-bottom: 1px solid #2929291f;
+}
+
+tbody tr td {
+    padding: 8px;
+}
+
+
+tr:hover {
+    background-color: #F7F7F7;
+}
+
+.icon-card-two {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width:60px;
+    height: 60px;
+    background-color: #454545b6;
+    margin: 15px 0px;
+    padding: 20px;
+    color: #757575;
+    font-size: 25px;
+}
+
+.object-name {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+.object-desc {
+    color: #ffffff;
+    font-size: 12px;
+}
+
+
+.result-card-two-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.result-card-two-content a{
+    text-emphasis: none;
+    color: #ffffff;
+}
+
+.bg-black {
+    background-color: #4d4d4d;
+}
+
+.bg-red {
+    background-color: #FF6A64;
+}
+
+.bg-green {
+    background-color: #4CAA98;
 }
