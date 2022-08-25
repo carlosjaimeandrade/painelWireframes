@@ -26,7 +26,8 @@ main {
     border-radius: 50px 0px 0px 50px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between
+    justify-content: space-between;
+    transition: 1s;
 }
 
 body {
@@ -263,7 +264,10 @@ body {
         width: 0;
     }
 }
-
+.thema{
+    color: rgba(255, 255, 255, 0.404);
+    cursor: pointer;
+}
 .bar-green {
     background-color: rgb(109, 170, 156);
     border-radius: 50px;

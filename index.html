@@ -48,6 +48,7 @@
                     <h3 class="user-name">User name</h3>
                     <small class="user-desc">lorem ipsum</small>
                 </div>
+                <i class="fa-solid fa-circle-half-stroke thema"></i>
             </div>
         </aside>
         <main>
@@ -63,7 +64,7 @@
                     <div class="search">
                         <input placeholder="Search" type="text"><i class="fa-solid fa-magnifying-glass"></i>
                     </div>
-                   
+
                 </div>
                 <div class="result-content">
                     <h5>Category Name</h5>
@@ -233,11 +234,26 @@
     const menuBtn = document.querySelector('.menu-btn');
     const menuBtnClose = document.querySelector('.menu-btn-close');
     const aside = document.querySelector('aside');
-    menuBtn.onclick = () =>{
+    menuBtn.onclick = () => {
         aside.style.width = '300px'
     }
-    menuBtnClose.onclick = () =>{
+    menuBtnClose.onclick = () => {
         aside.style.width = '0px'
+    }
+
+    const thema = document.querySelector('.thema')
+    const main = document.querySelector('main');
+    const asideMenu = document.querySelector('aside');
+    const resultTitle = document.querySelectorAll('.result-content > h5');
+    const backFront = document.querySelectorAll('.back-front-arrow > a');
+    thema.onclick = () => {
+        main.style.backgroundColor = '#292929';
+        resultTitle.forEach( title =>{
+            title.style.color = '#fff';
+        })
+        backFront.forEach( title =>{
+            title.style.color = '#fff';
+        })
     }
 
 </script>
