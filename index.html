@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="fontawesome-free-6.1.2-web/css/all.css">
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="admin.css">
     <link rel="stylesheet" href="aside.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -229,33 +229,5 @@
 <script type="text/javascript" src="./graphic.js"></script>
 <script type="text/javascript" src="./pageHover.js"></script>
 <script type="text/javascript" src="./progressBar.js"></script>
-
-<script>
-    const menuBtn = document.querySelector('.menu-btn');
-    const menuBtnClose = document.querySelector('.menu-btn-close');
-    const aside = document.querySelector('aside');
-    menuBtn.onclick = () => {
-        aside.style.width = '300px'
-    }
-    menuBtnClose.onclick = () => {
-        aside.style.width = '0px'
-    }
-
-    const thema = document.querySelector('.thema')
-    const main = document.querySelector('main');
-    const asideMenu = document.querySelector('aside');   
-    const menuIcon = document.querySelector('.menu-btn');
-    const resultTitle = document.querySelectorAll('.result-content > h5');
-    const backFront = document.querySelectorAll('.back-front-arrow > a');
-    thema.onclick = () => {
-        menuIcon.style.color  = '#fff';
-        main.style.backgroundColor = '#292929';
-        resultTitle.forEach( title =>{
-            title.style.color = '#fff';
-        })
-        backFront.forEach( title =>{
-            title.style.color = '#fff';
-        })
-    }
-
-</script>
+<script type="text/javascript" src="./nav.js"></script>
+<script type="text/javascript" src="./theme.js"></script>
