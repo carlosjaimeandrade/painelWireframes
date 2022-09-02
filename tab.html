@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome-free-6.1.2-web/css/all.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="aside.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&family=Poppins:wght@100&display=swap"
+        rel="stylesheet">
+    <title>Painel</title>
+</head>
+    <div class='modal'>
+        <div class='modal-header'>
+        </div>
+        <div class='modal-content'>
+        </div>
+        <div class='actions'>
+            <a class='success' href='#'>Sim</a>
+            <a class='cancel' href='#'>Cancelar</a>
+        </div>
+        <div class='loader-bar'>
+        <div class='bar'></div>
+        </div>
+    </div>
+<body>
+    <div data-page="home" class="app">
+        <main>
+            <div class="result-container-tab">
+                <div class="result-content tab-title">
+                    <h5>Instagram enviar mensagem</h5>
+                    <div class="result-card">
+                        <div class="result-card-main-start">
+                            <div class="data-container">
+                                <span class="btn btn-enviar">Enviar</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-card-main-tab-config">
+                            <button data-visible="tab1">Configuração</button>
+                            <button data-visible="tab2">Texto</button> 
+                        </div>
+                    </div>
+                    <div class="result-card">
+                        <div data-tab class="result-card-main-tab tab1">
+                            <div>
+                                <div class="entry-area">
+                                    <div class="inputGroup">
+                                        <input id="option1" name="option1" type="checkbox"/>
+                                        <label for="option1">Option One</label>
+                                    </div>
+                                    <div class="inputGroup">
+                                        <input id="option2" name="option2" type="checkbox"/>
+                                        <label for="option2">Option Two</label>
+                                    </div>
+                                </div>
+                                <div class="entry-area">
+                                    <div class="inputGroup">
+                                        <input id="radio1" name="radio" type="radio"/>
+                                        <label for="radio1">Yes</label>
+                                    </div>
+                                    <div class="inputGroup">
+                                        <input id="radio2" name="radio" type="radio"/>
+                                        <label for="radio2">No</label>
+                                    </div>
+                                </div>
+                                <div class="entry-area">
+                                    <label for="inp" class="inp">
+                                        <input type="number" id="inp1" placeholder="&nbsp;">
+                                        <span class="label">Label</span>
+                                        <span class="focus-bg"></span>
+                                    </label>
+                                    <label for="inp" class="inp">
+                                        <input type="number" id="inp2" placeholder="&nbsp;">
+                                        <span class="label">Label</span>
+                                        <span class="focus-bg"></span>
+                                    </label>
+                                    <label for="inp" class="inp">
+                                        <input type="number" id="inp3" placeholder="&nbsp;">
+                                        <span class="label">Label</span>
+                                        <span class="focus-bg"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-tab class="result-card-main-tab tab2">
+                            <label for="">Entre com seu texto</label>
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-card-main-progress-bar">
+                            <div class="result-card-main-progress"></div>
+                        </div>
+                    </div>
+                </div>                
+                <div class="result-content details-view-tab">
+                    <div>
+                        <h5>Histório de operação</h5>
+                        <div class="table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Coluna 1</td>
+                                        <td>Coluna 2</td>
+                                        <td>Coluna 3</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>valor 1</td>
+                                        <td>valor 2</td>
+                                        <td>valor 3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>valor 1</td>
+                                        <td>valor 2</td>
+                                        <td>valor 3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>valor 1</td>
+                                        <td>valor 2</td>
+                                        <td>valor 3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>valor 1</td>
+                                        <td>valor 2</td>
+                                        <td>valor 3</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
+
+<script type="text/javascript" src="./progressBarTab.js"></script>
+<script type="text/javascript" src="./modal.js"></script>
+<script type="text/javascript" src="./tab.js"></script>
+
+
+<script>
+    const btnEnviar = document.querySelector(".btn-enviar")
+    btnEnviar.onclick = () => {
+        modal('title', 'corpo corpo corpo corpo corpo corpo', () => { alert ('enviar mensagem')})
+    }
+</script>
